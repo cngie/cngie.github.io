@@ -102,22 +102,30 @@ a:hover{
 #title{
     height: 75vh;
     width: 100vw;
+    position: relative;
+    display: flex;
+    z-index: 1;
 }
 #title h1{
-    padding-top: 340px;
+    position: absolute;
+    bottom: 0;
 }
-
+#title.hide{
+    transform: translateY(-80vh);
+}
 /*milk chocolate*/
 
 #milk{
-    height: 200vh;
+    height: 100vh;
 }
 #mms{
     position: relative;
     max-width: 60vw;
     top: -300px;
 }
-
+#button-hide{
+    width: 30px;
+}
 /*colorful candy*/
 #color{
 
@@ -141,4 +149,4 @@ a:hover{
 
 /*buy*/
 
-/*javascript*/
+
