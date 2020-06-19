@@ -1,0 +1,119 @@
+html {
+    box-sizing: border-box;
+  }
+*, *:before, *:after {
+    box-sizing: inherit;
+} 
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease-in-out;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+body{
+    text-align: center;
+    font-family: "Galada";
+    font-weight: normal;
+	font-style: normal;
+	margin: 0;
+	font-variant-ligatures: common-ligatures;
+	font-kerning: normal;
+	font-feature-settings: "kern" 1, "liga" 1, "pnum" 1;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+}
+:root {
+    --white:  #FFE9DF;
+    --lightb: #CD7B58;
+    --brown:  #8D4B2F;
+    --dark:  #412013;
+}
+h1{
+    font-family: "Monoton";
+    font-size: 90px;
+    margin: 0;
+}
+h3{
+    margin: 0;
+    font-size: 48px;
+}
+
+/*sections*/
+
+.section{
+    height: 100vh;
+    align-items: center;
+}
+#milk, #movie, #buy{
+    background-color: var(--lightb);
+    color: var(--white)
+}
+#color, #title{
+    background-color: var(--white);
+    color: var(--dark);
+}
+#game{
+    background-color: var(--brown);
+    color: var(--white)
+}
+
+/*nav bar*/
+
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+#navbar{
+    min-width: 1000px;
+    width: 100vw;
+}
+ul{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+ }
+ #logo{
+    max-width: 200px;
+}
+/*title*/
+#title{
+    height: 75vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+}
+#title h1{
+    padding-top: 340px;
+}
+/*milk chocolate*/
+#milk{
+    height: 200vh;
+}
+#mms{
+    max-width: 80vw;
+    padding-top: 300px;
+}
+/*colorful candy*/
+#mmcolor{
+    width: 105vw;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+/*movie snack*/
+
+/*game night*/
+#cards-main, #cards-white{
+    max-width: 110vw;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+/*buy*/
