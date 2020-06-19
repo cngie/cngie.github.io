@@ -1,30 +1,21 @@
-html {
-    box-sizing: border-box;
-  }
-*, *:before, *:after {
-    box-sizing: inherit;
-} 
+@import '_resets.css';
+
 a{
     text-decoration: none;
     color: inherit;
     transition: all 0.3s ease-in-out;
 }
-ul{
-    list-style: none;
-    padding: 0;
-}
+
 body{
     text-align: center;
     font-family: "Galada";
     font-weight: normal;
 	font-style: normal;
-	margin: 0;
 	font-variant-ligatures: common-ligatures;
 	font-kerning: normal;
 	font-feature-settings: "kern" 1, "liga" 1, "pnum" 1;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding: 0;
 }
 :root {
     --white:  #FFE9DF;
@@ -82,7 +73,9 @@ ul{
  #logo{
     max-width: 200px;
 }
+
 /*title*/
+
 #title{
     height: 75vh;
     width: 100vw;
@@ -92,7 +85,9 @@ ul{
 #title h1{
     padding-top: 340px;
 }
+
 /*milk chocolate*/
+
 #milk{
     height: 200vh;
 }
@@ -100,20 +95,25 @@ ul{
     max-width: 80vw;
     padding-top: 300px;
 }
+
 /*colorful candy*/
+
 #mmcolor{
     width: 105vw;
     display: flex;
     align-items: center;
     position: absolute;
 }
+
 /*movie snack*/
 
 /*game night*/
+
 #cards-main, #cards-white{
     max-width: 110vw;
     display: flex;
     align-items: center;
     position: absolute;
 }
+
 /*buy*/
