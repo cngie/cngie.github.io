@@ -1,5 +1,11 @@
 @import '_resets.css';
-
+html {
+    overflow:   scroll;
+  }
+  ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* make scrollbar transparent */
+  }
 a{
     text-decoration: none;
     color: inherit;
@@ -27,50 +33,24 @@ h1{
     font-family: "Monoton";
     font-size: 90px;
     margin: 0;
+    line-height: 100px;
 }
 h3{
     margin: 0;
     font-size: 48px;
-}
-
-/*sections*/
-.section{
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-}
-.text{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#milk, #movie, #buy{
-    background-color: var(--lightb);
-    color: var(--white)
-}
-#color, #title{
-    background-color: var(--white);
-    color: var(--dark);
-}
-#game{
-    background-color: var(--brown);
-    color: var(--white)
+    line-height: 55px;
 }
 
 /*nav bar*/
 
 nav{
-    position: fixed;
     top: 0;
     z-index: 2;
     width: 100%;
     color: var(--lightb);
     font-size: 1.5rem;
+    background-color: var(--white);
+    padding-bottom: 2rem;
 }
 #navbar{
     min-width: 1000px;
@@ -90,6 +70,7 @@ ul{
  }
  #logo{
     max-width: 15vw;
+    min-width: 130px;
 }
 #shop{
     color: var(--white);
@@ -100,19 +81,40 @@ a:hover{
 /*title*/
 
 #title{
-    height: 75vh;
+    height: 40vh;
     width: 100vw;
     position: relative;
     display: flex;
-    z-index: 1;
+    justify-content: center;
+    align-items: center;
 }
-#title h1{
-    position: absolute;
-    bottom: 0;
+
+
+/*sections*/
+.section{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#title.hide{
-    transform: translateY(-80vh);
+
+#milk, #movie, #buy{
+    background-color: var(--lightb);
+    color: var(--white)
 }
+#color, #title{
+    background-color: var(--white);
+    color: var(--dark);
+}
+#game{
+    background-color: var(--brown);
+    color: var(--white)
+}
+
 /*milk chocolate*/
 
 #milk{
@@ -120,33 +122,43 @@ a:hover{
 }
 #mms{
     position: relative;
-    max-width: 60vw;
-    top: -300px;
+    max-width: 630px;
+    transform: translateY(-100%);
 }
-#button-hide{
-    width: 30px;
-}
+
 /*colorful candy*/
 #color{
+    background-image: url("mm-bg2-01.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-}
-#mmcolor{
-    display: flex;
-    position: absolute;
-    min-height: 100vh;
-}
 
 /*movie snack*/
-
-/*game night*/
-
-#cards-main, #cards-white{
-    max-width: 110vw;
-    display: flex;
-    align-items: center;
+#movie-border{
+    width: 100%;
     position: absolute;
+}
+#movie{
+    background-image: url("movie-mm.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*game night*/
+#cards{
+    width: 1800px;
+    transform: translateY(-35%);
+}
+.text-bottom{
+    position: absolute;
+    bottom: 3rem;
 }
 
 /*buy*/
-
+#buy h1{
+    padding: 1rem 4rem;
+    border: var(--white) 3px solid;
+}
 
