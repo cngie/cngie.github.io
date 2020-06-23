@@ -34,11 +34,17 @@ h1{
     font-size: 90px;
     margin: 0;
     line-height: 100px;
+    background-color: inherit;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 h3{
     margin: 0;
     font-size: 48px;
     line-height: 55px;
+    background-color: inherit;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 /*nav bar*/
@@ -120,10 +126,14 @@ a:hover{
 #milk{
     height: 100vh;
 }
+#milk-text{
+    position: absolute;
+    bottom: 10rem;
+}
 #mms{
-    position: relative;
+    position: absolute;
     max-width: 630px;
-    transform: translateY(-100%);
+    top: -20vh;
 }
 
 /*colorful candy*/
@@ -147,13 +157,14 @@ a:hover{
     background-repeat: no-repeat;
 }
 /*game night*/
-#cards{
+.cards{
     width: 1800px;
-    transform: translateY(-35%);
+    position: absolute;
+    top: -10vh;
 }
 .text-bottom{
     position: absolute;
-    bottom: 3rem;
+    bottom: 5rem;
 }
 
 /*buy*/
@@ -161,4 +172,3 @@ a:hover{
     padding: 1rem 4rem;
     border: var(--white) 3px solid;
 }
-
