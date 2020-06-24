@@ -12,8 +12,8 @@ html {
     background: var(--dark);
     box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
 }
-/* Resets */
 
+/* Resets */
 html {
     box-sizing: border-box;
   }
@@ -64,6 +64,7 @@ body{
 	font-feature-settings: "kern" 1, "liga" 1, "pnum" 1;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    width: 100vw;
 }
 :root {
     --white:  #FFE9DF;
@@ -89,6 +90,7 @@ h3{
 h1,h3{
     text-shadow: 0px 3.5625px 3.5625px rgba(0, 0, 0, 0.1);
 }
+
 /*nav bar*/
 
 nav{
@@ -104,8 +106,18 @@ nav{
 }
 #navbar{
     min-width: 1300px;
-    width: 100vw;
-    position: relative;
+}
+#nav-small{
+    position: absolute;
+    transform: translatex(-105%);
+    transition: transform 0.5s cubic-bezier(0.45,0.05,0.55,0.95);
+    background-color: var(--dark);
+}
+#nav-small.open{
+    transform: translatex(0%);
+}
+#close{
+    font-size: 3rem;
 }
 ul{
     position: absolute;
@@ -125,15 +137,17 @@ ul{
 #shop{
     color: var(--white);
 }
-a:hover{
+button{
+    transition: all 0.3s ease-in-out;
+}
+a:hover, button:hover{
     color: var(--white);
 }
 
 #logo-small{
     width: 170px;
-    position: absolute;
-    margin-top: 1.7rem;
 }
+
 /*title*/
 
 #title{
@@ -145,8 +159,8 @@ a:hover{
     align-items: center;
 }
 
-
 /*sections*/
+
 .section{
     height: 100vh;
     width: 100vw;
@@ -192,6 +206,7 @@ a:hover{
 }
 
 /*colorful candy*/
+
 #color{
     background-image: url("mm-bgv3-01.png");
     background-size: 100%;
@@ -218,7 +233,9 @@ a:hover{
     width:80vw;
     position: absolute;
 }
+
 /*game night*/
+
 .cards{
     width: 1800px;
     position: absolute;
@@ -229,14 +246,25 @@ a:hover{
 }
 
 /*buy*/
+
 #buy h1{
     padding: 1rem 4rem;
     border: var(--white) 3px solid;
 }
+/*#cart{
+    width: 400px;
+    position: absolute;
+    bottom: -2rem;
+    opacity: 0.7;
+    transition: transform 1s cubic-bezier(0.45,0.05,0.55,0.95);
+}
+#cart.move{
+    transform: translatex(200%);
+    opacity: 1;
+}*/
 
 /*queries*/
-
-/*default*/
+/* BIG: default*/
 
 @media screen and (max-width: 1800px){
     h1{
@@ -259,7 +287,7 @@ a:hover{
     }
 }
 
-/*movie-square, text-smaller */
+/* MEDIUM: movie-square, text-smaller */
 @media screen and (max-width: 1000px){
     h1{
         font-size: 75px;
@@ -283,7 +311,7 @@ a:hover{
     }
 }
 
-/*nav, text-smaller, cards-smaller*/
+/* MEDIUM-S: nav, text-smaller, cards-smaller*/
 
 @media screen and (max-width: 800px){
     h1{
@@ -327,6 +355,8 @@ a:hover{
     }
 }
 
+/* SMALL: mms-smaller, text-smaller, cards-smaller, buybutton-smaller, movie-rearrange*/
+
 @media screen and (max-width: 675px){
     #mms{
         width: 500px;
@@ -339,7 +369,7 @@ a:hover{
         display: none;
     }
     .medium-s{
-        display: none;
+        display: flex;
     }
     #logo-small{
         display: flex;
@@ -352,14 +382,12 @@ a:hover{
         position: absolute;
     }
     #title h1{
-        font-size: 65px;
-        line-height: 80px;
+        font-size: 70px;
+        line-height: 90px;
         text-align: left;
         padding-bottom: 5rem;
     }
-    #title{
-        height: 30vh;
-    }
+
     #buy h1{
         padding: 1rem 2rem;
     }
