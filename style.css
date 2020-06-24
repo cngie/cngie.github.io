@@ -1,11 +1,18 @@
 @import '_resets.css';
 html {
-    overflow:   scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
   ::-webkit-scrollbar {
-      width: 0px;
-      background: transparent; /* make scrollbar transparent */
+      width: 5px;
   }
+  ::-webkit-scrollbar-track{
+      background: var(--white);
+  }
+  ::-webkit-scrollbar-thumb{
+    background: var(--dark);
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+}
 a{
     text-decoration: none;
     color: inherit;
@@ -34,7 +41,6 @@ h1{
     font-size: 90px;
     margin: 0;
     line-height: 100px;
-    background-color: inherit;
     padding-left: 2rem;
     padding-right: 2rem;
 }
@@ -42,24 +48,27 @@ h3{
     margin: 0;
     font-size: 48px;
     line-height: 55px;
-    background-color: inherit;
     padding-left: 2rem;
     padding-right: 2rem;
 }
-
+h1,h3{
+    text-shadow: 0px 3.5625px 3.5625px rgba(0, 0, 0, 0.1);
+}
 /*nav bar*/
 
 nav{
     top: 0;
-    z-index: 2;
-    width: 100%;
+    width: 100vw;
     color: var(--lightb);
     font-size: 1.5rem;
     background-color: var(--white);
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 #navbar{
-    min-width: 1000px;
+    min-width: 1300px;
     width: 100vw;
     position: relative;
 }
@@ -76,13 +85,19 @@ ul{
  }
  #logo{
     max-width: 15vw;
-    min-width: 130px;
+    min-width: 170px;
 }
 #shop{
     color: var(--white);
 }
 a:hover{
     color: var(--white);
+}
+
+#logo-small{
+    width: 170px;
+    position: absolute;
+    margin-top: 1.7rem;
 }
 /*title*/
 
@@ -106,15 +121,20 @@ a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-right: 5px;
 }
 
-#milk, #movie, #buy{
+#milk, #buy{
     background-color: var(--lightb);
     color: var(--white)
 }
 #color, #title{
     background-color: var(--white);
     color: var(--dark);
+}
+#movie{
+    background-color: var(--dark);
+    color: var(--white)
 }
 #game{
     background-color: var(--brown);
@@ -128,7 +148,7 @@ a:hover{
 }
 #milk-text{
     position: absolute;
-    bottom: 10rem;
+    bottom: 12rem;
 }
 #mms{
     position: absolute;
@@ -138,7 +158,7 @@ a:hover{
 
 /*colorful candy*/
 #color{
-    background-image: url("mm-bg2-01.png");
+    background-image: url("mm-bgv3-01.png");
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -146,21 +166,27 @@ a:hover{
 
 
 /*movie snack*/
-#movie-border{
-    width: 100%;
+
+#movie-mmv3{
+    width: 90vw;
+    position: absolute;
+    min-width: 1000px;
+}
+.text-center{
     position: absolute;
 }
-#movie{
-    background-image: url("movie-mm.png");
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+#movie-bg-1000{
+    position: absolute;
+    width:70vw
+}
+#movie-bg-smallest{
+    width:80vw;
+    position: absolute;
 }
 /*game night*/
 .cards{
     width: 1800px;
     position: absolute;
-    top: -10vh;
 }
 .text-bottom{
     position: absolute;
@@ -171,4 +197,143 @@ a:hover{
 #buy h1{
     padding: 1rem 4rem;
     border: var(--white) 3px solid;
+}
+
+/*queries*/
+
+/*default*/
+
+@media screen and (max-width: 1800px){
+    h1{
+        font-size: 90px;
+    }
+    h3{
+        font-size: 48px;
+    }
+    .big{
+        display: flex;
+    }
+    .medium{
+        display: none;
+    }
+    .medium-s{
+        display: none;
+    }
+    .small{
+        display: none;
+    }
+}
+
+/*movie-square, text-smaller */
+@media screen and (max-width: 1000px){
+    h1{
+        font-size: 75px;
+        line-height: 85px;
+    }
+    h3{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .big{
+        display: none;
+    }
+    .medium{
+        display: flex;
+    }
+    .medium-s{
+        display: none;
+    }
+    .small{
+        display: none;
+    }
+}
+
+/*nav, text-smaller, cards-smaller*/
+
+@media screen and (max-width: 800px){
+    h1{
+        font-size: 65px;
+        line-height: 85px;
+    }
+    h3{
+        font-size: 25px;
+        line-height: 45px;
+    }
+    #title h1{
+        font-size: 75px;
+        line-height: 90px;
+        text-align: left;
+        padding-bottom: 5rem;
+    }
+    .big{
+        display: none;
+    }
+    .medium{
+        display: flex;
+    }
+    .medium-s{
+        display: flex;
+    }
+    ul{
+        display:none;
+    }
+    .small{
+        display: none;
+    }
+    .cards{
+        width: 1400px;
+        position: absolute;
+    }
+    #color{
+        background-image: url("mm-bg-small-01.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 675px){
+    #mms{
+        width: 500px;
+        top: -10vh;
+    }
+    .big{
+        display: none;
+    }
+    .medium{
+        display: none;
+    }
+    .medium-s{
+        display: none;
+    }
+    #logo-small{
+        display: flex;
+    }
+    .small{
+        display: flex;
+    }
+    .cards{
+        width: 1200px;
+        position: absolute;
+    }
+    #title h1{
+        font-size: 65px;
+        line-height: 80px;
+        text-align: left;
+        padding-bottom: 5rem;
+    }
+    #title{
+        height: 30vh;
+    }
+    #buy h1{
+        padding: 1rem 2rem;
+    }
+    #movie-text{
+        position: absolute;
+        bottom: 10rem;
+    }
+    #movie-bg-smallest{
+        position: absolute;
+        top: 10rem;
+    }
 }

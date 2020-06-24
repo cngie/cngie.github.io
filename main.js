@@ -2,20 +2,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.to("#mms", {
     scrollTrigger:{
-        trigger: "#milk-text",
-        toggleActions: "restart pause resume pause",
+        trigger: "#milk",
+        start: "top center",
+        end:"bottom 5%",
+        scrub:2,
+        toggleActions: "restart pause reverse pause",
     },
-    duration:2, 
-    y: 400,
-    ease: "bounce"
+    duration: 2,
+    y: "50vh",
 });
 
 gsap.from(".cards",{
     scrollTrigger:{
-        trigger:".text-bottom",
-        toggleActions: "restart pause resume pause",
+        trigger:"#game",
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: 3,
     },
-    duration: 1.5,
-    y: -250,
-    stagger: 0.3,
+    y: -300,
+
 });
