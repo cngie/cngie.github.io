@@ -12,6 +12,18 @@ gsap.to("#mms", {
     y: "50vh",
 });
 
+gsap.to("#mms2", {
+    scrollTrigger:{
+        trigger: "#buy",
+        start: "top center",
+        end:"bottom 5%",
+        scrub:2,
+        toggleActions: "restart pause reverse pause",
+    },
+    duration: 2,
+    y: "70vh",
+});
+
 gsap.from(".cards",{
     scrollTrigger:{
         trigger:"#game",
@@ -32,8 +44,8 @@ openMenuButton.onclick = function(){
 closeMenuButton.onclick = function(){
     navSmall.classList.remove("open");
 }
-var buyButton = document.getElementById('buynow');
-var cart = document.getElementById('cart')
+/*var buyButton = document.getElementById('buynow');
+var cart = document.getElementById('cart')&/
 
 /*gsap.from("#cart",{
     scrollTrigger:{

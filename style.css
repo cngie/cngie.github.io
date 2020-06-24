@@ -105,6 +105,7 @@ nav{
     justify-content: center;
 }
 #navbar{
+    width: 100vw;
     min-width: 1300px;
 }
 #nav-small{
@@ -199,7 +200,7 @@ a:hover, button:hover{
     position: absolute;
     bottom: 12rem;
 }
-#mms{
+#mms, #mms2{
     position: absolute;
     max-width: 630px;
     top: -20vh;
@@ -246,8 +247,8 @@ a:hover, button:hover{
 }
 
 /*buy*/
-
 #buy h1{
+    margin-top: 40vh;
     padding: 1rem 4rem;
     border: var(--white) 3px solid;
 }
@@ -358,7 +359,7 @@ a:hover, button:hover{
 /* SMALL: mms-smaller, text-smaller, cards-smaller, buybutton-smaller, movie-rearrange*/
 
 @media screen and (max-width: 675px){
-    #mms{
+    #mms, #mms2{
         width: 500px;
         top: -10vh;
     }
