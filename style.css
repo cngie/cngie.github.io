@@ -1,4 +1,3 @@
-@import '_resets.css';
 html {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -13,6 +12,42 @@ html {
     background: var(--dark);
     box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
 }
+/* Resets */
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  } 
+  body{
+      margin: 0;
+      padding: 0;
+  }
+  button {
+    appearance:none;
+    background:transparent;
+    border:0;
+    padding:0;
+    cursor:pointer;
+    font:inherit;
+    text-align:inherit;
+    color: inherit;
+  } 
+  button:active,
+  button:focus {
+    outline:none;
+  }
+  ul, ol{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  }
+  svg{
+      display: block;
+  }
+/*end of resets*/
+
 a{
     text-decoration: none;
     color: inherit;
